@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background: linear-gradient(to bottom, #050412 0%, #0b071d 55%, #120a2c 100%);
+    font-family: 'Varela Round', sans-serif;
+    color: #fff;
+    min-height: 100vh;
+}
+
+body {
+    position: relative;
+    z-index: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px;
+    gap: 24px;
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    opacity: 0.3;
+    z-index: -2;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(5,4,18,0.5), rgba(18,11,53,0.55));
+    z-index: -1;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 220px;
+    padding: 28px 20px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 28px;
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.12);
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+    transition: width 0.3s ease, padding 0.3s ease;
+    overflow: hidden;
+}
+
+.sidebar.collapsed {
+    width: 80px;
+    padding: 28px 12px;
+}
+
+.sidebar-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.sidebar-toggle:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-toggle span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    margin: 3px 0;
+    background: currentColor;
+    border-radius: 1px;
+}
+
+.sidebar .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    border-radius: 16px;
+    color: #e6e4ff;
+    text-decoration: none;
+    font-size: 0.98rem;
+    font-weight: 600;
+    transition: background 0.2s ease, color 0.2s ease;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.sidebar .nav-link .nav-icon {
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.sidebar.collapsed .nav-text {
+    display: none;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+    background: rgba(127, 106, 255, 0.16);
+    color: #ffffff;
+}
+
+.profile-card {
+    background: transparent;
+    border: none;
+    border-radius: 24px;
+    box-shadow: 0 24px 100px rgba(0, 0, 0, 0.14);
+    max-width: 1100px;
+    width: 100%;
+    padding: 56px 48px;
+    min-height: 620px;
+}
+
+.avatar {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.04)), url("image/pfp.png") center/cover no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    margin: 0 auto 32px;
+}
+
+.profile-card h1 {
+    font-size: 2rem;
+    letter-spacing: 0.02em;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.profile-content {
+    text-align: center;
+}
+
+.bio {
+    color: #dcd9ff;
+    line-height: 1.75;
+    margin: 0 auto;
+    max-width: 420px;
+    font-size: 1rem;
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.96rem;
+    font-weight: 700;
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+}
+
+.social-icon svg {
+    width: 18px;
+    height: 18px;
+    display: block;
+}
+
+.social-btn.facebook { background: rgba(59, 89, 152, 0.18); }
+.social-btn.tiktok { background: rgba(0, 0, 0, 0.2); }
+.social-btn.discord { background: rgba(114, 137, 218, 0.18); }
+.social-btn.youtube { background: rgba(255, 0, 0, 0.16); }
+.social-btn.github { background: rgba(255, 255, 255, 0.1); color: #ddd; }
+
+.social-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Sections for in-page navigation */
+.sections {
+    width: 100%;
+    position: relative;
+    min-height: 320px;
+}
+
+/* Stack sections so opacity/transform transitions work (no display:none) */
+.section {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transform: translateY(8px);
+    pointer-events: none;
+    transition: opacity 320ms cubic-bezier(.2,.9,.2,1), transform 320ms cubic-bezier(.2,.9,.2,1);
+}
+
+.section.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* Make profile-card content stretch horizontally when sections visible */
+.profile-card { display: block; }
+
+/* Contact form styles */
+.contact-form {
+    margin: 18px auto 0;
+    max-width: 560px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-form label {
+    font-size: 0.9rem;
+    color: #cfcaf7;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    color: #fff;
+    padding: 10px 12px;
+    border-radius: 10px;
+    font-size: 0.98rem;
+}
+
+.contact-form textarea { resize: vertical; }
+
+.submit-btn {
+    align-self: flex-start;
+    padding: 10px 18px;
+    background: linear-gradient(135deg, #7f6aff, #4f54ff);
+    border: none;
+    color: #fff;
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+.form-feedback {
+    margin-top: 8px;
+    color: #d6ffd6;
+    font-weight: 600;
+}
+
+/* About section styles */
+.about-grid {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 28px;
+    align-items: start;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.about-avatar .avatar {
+    width: 220px;
+    height: 220px;
+    margin: 0;
+}
+
+.about-intro h2 { margin-bottom: 8px; }
+.lead { color: #eae7ff; font-weight: 600; margin-bottom: 8px; }
+.about-highlights { display:flex; gap:12px; flex-wrap:wrap; color:#d6d3ff; margin:12px 0; }
+
+.skills { display:flex; gap:8px; flex-wrap:wrap; margin:12px 0; }
+.skill-badge { background: rgba(255,255,255,0.04); padding:6px 10px; border-radius:999px; font-weight:600; color:#fff; font-size:0.9rem; border:1px solid rgba(255,255,255,0.04); }
+
+.about-actions { margin-top:16px; display:flex; gap:12px; }
+.cv-btn { background: linear-gradient(135deg, #4f54ff, #7f6aff); padding:10px 16px; border-radius:999px; color:#fff; text-decoration:none; font-weight:700; }
+
+/* PB table styles */
+.pb-table-wrap { margin-top: 18px; display:flex; flex-direction:column; align-items:center; }
+.pb-table-wrap h3 { margin-bottom: 10px; color:#e6e4ff; }
+.pb-table { border-collapse: collapse; width: 380px; max-width: 90%; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 10px; overflow: hidden; }
+.pb-table th, .pb-table td { padding: 10px 12px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.04); }
+.pb-table thead { background: rgba(255,255,255,0.02); }
+.pb-table tbody tr:hover { background: rgba(127,106,255,0.04); }
+.pb-table td[contenteditable="true"] { cursor: text; }
+.pb-table td[contenteditable="true"]:focus { outline: 2px solid rgba(127,106,255,0.18); outline-offset: 2px; }
+
+@media (max-width: 880px) {
+    .about-grid { grid-template-columns: 1fr; text-align: center; }
+    .about-avatar { order: -1; }
+    .about-avatar .avatar { margin: 0 auto 18px; }
+}
+
+/* Subtle focus outline for accessibility */
+.nav-link:focus {
+    outline: 3px solid rgba(127,106,255,0.18);
+    outline-offset: 4px;
+}
+
+/* Smooth scroll behavior when needed */
+html {
+    scroll-behavior: smooth;
+}
+
+

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hưng Cube</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <video class="background-video" autoplay muted loop playsinline>
+        <source src="image/bg.mp4" type="video/mp4">
+    </video>
+    <nav class="sidebar" id="sidebar">
+        <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <a href="#" class="nav-link active" data-target="home">
+            <span class="nav-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            </span>
+            <span class="nav-text">Trang chủ</span>
+        </a>
+        <a href="#" class="nav-link" data-target="about">
+            <span class="nav-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z"/></svg>
+            </span>
+            <span class="nav-text">Giới thiệu</span>
+        </a>
+        <a href="#" class="nav-link" data-target="contact">
+            <span class="nav-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 8V7a2 2 0 0 0-2-2h-3V3h-2v2H10V3H8v2H5a2 2 0 0 0-2 2v1H1v2h1v7a2 2 0 0 0 2 2h1v2h2v-2h6v2h2v-2h1a2 2 0 0 0 2-2v-7h1V8h-1zm-3 9H6V8h12v9z"/></svg>
+            </span>
+            <span class="nav-text">Liên hệ</span>
+        </a>
+    </nav>
+    <main class="profile-card">
+        <div class="sections">
+            <section id="home" class="section active">
+                <div class="avatar"></div>
+                <div class="profile-content">
+                    <h1>Hưng Cube</h1>
+                    <p class="bio">Xin chào! Mình là Hưng, mình là một cuber thích chơi khối Rubik ^^</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=61580957518607" class="social-btn facebook">
+                            <span class="social-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.5 9.92v-7.03h-2.4V12h2.4V9.82c0-2.37 1.41-3.68 3.57-3.68 1.04 0 2.12.18 2.12.18v2.33h-1.19c-1.17 0-1.53.72-1.53 1.46V12h2.6l-.42 2.89h-2.18v7.03A10 10 0 0 0 22 12z"/></svg>
+                            </span>
+                            Facebook
+                        </a>
+                        <a href="https://www.tiktok.com/@hung_0d" class="social-btn tiktok">
+                            <span class="social-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2v10.9A4.9 4.9 0 1 1 9.1 10H12V2h3v3.28A6.1 6.1 0 1 0 15 12.06V5.2H12z"/></svg>
+                            </span>
+                            TikTok
+                        </a>
+                        <a href="https://discord.gg/Ak7ekrHZFT" class="social-btn discord">
+                            <span class="social-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 3H4a1 1 0 0 0-.9 1.45l1.3 2.35A16 16 0 0 0 7.34 12a16 16 0 0 0-2.93 5.17L3 19a1 1 0 0 0 .9 1.45h15.2a1 1 0 0 0 .9-1.45l-1.42-1.88A16 16 0 0 0 16.66 12a16 16 0 0 0 2.93-5.17l1.3-2.35A1 1 0 0 0 20 3zM8.5 11.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm7 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg>
+                            </span>
+                            Discord
+                        </a>
+                        <a href="https://www.youtube.com/@matchalatte123aaa" class="social-btn youtube">
+                            <span class="social-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a2.8 2.8 0 0 0-1.96-2A29.77 29.77 0 0 0 12 5 29.77 29.77 0 0 0 2.96 5.2 2.8 2.8 0 0 0 1 7.2 29.76 29.76 0 0 0 0 12a29.76 29.76 0 0 0 1 4.8 2.8 2.8 0 0 0 1.96 2A29.76 29.76 0 0 0 12 19a29.76 29.76 0 0 0 9.04-1.2 2.8 2.8 0 0 0 1.96-2A29.76 29.76 0 0 0 24 12a29.76 29.76 0 0 0-1-4.8zM9.75 15.02V8.98L16 12l-6.25 3.02z"/></svg>
+                            </span>
+                            YouTube
+                        </a>
+                        <a href="https://github.com/hungdev123" class="social-btn github">
+                            <span class="social-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.47c.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.71-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.1-1.47-1.1-1.47-.9-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0 1 12 6.8c.85.01 1.7.11 2.5.32 1.9-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.85 0 1.34-.01 2.41-.01 2.74 0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>
+                            </span>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section id="about" class="section" tabindex="-1">
+                <div class="about-grid">
+                    <div class="about-avatar">
+                        <div class="avatar"></div>
+                    </div>
+                    <div class="about-intro">
+                        <h2>Giới thiệu</h2>
+                        <p class="lead">Xin chào, mình là Hưng — học sinh đam mê Rubik (speedcubing).</p>
+                        <p>Mình tập trung luyện giải Rubik hàng ngày, thích phân tích thuật toán và cải thiện thời gian cá nhân.</p>
+
+                        <div class="about-highlights">
+                            <div>📍 Địa điểm: Lâm Đồng, Việt Nam</div>
+                            <div>🎓 Đang học: THCS Chí Công</div>
+                        </div>
+
+                        <div class="skills">
+                            <span class="skill-badge">3x3 PB: 13.9s</span>
+                            <span class="skill-badge">CFOP</span>
+                        </div>
+
+                        <div class="pb-table-wrap">
+                            <h3>Bảng PB (5×2)</h3>
+                            <table class="pb-table" aria-label="Personal best table">
+                                <thead>
+                                    <tr>
+                                        <th>Ngày</th>
+                                        <th>PB (s)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td contenteditable="true">21-5-2026</td><td contenteditable="true">13.9</td></tr>
+                                    <tr><td contenteditable="true">—</td><td contenteditable="true">—</td></tr>
+                                    <tr><td contenteditable="true">—</td><td contenteditable="true">—</td></tr>
+                                    <tr><td contenteditable="true">—</td><td contenteditable="true">—</td></tr>
+                                    <tr><td contenteditable="true">—</td><td contenteditable="true">—</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="projects" class="section">
+                <h2>Dự án</h2>
+                <p>Đang cập nhật...</p>
+            </section>
+            <section id="contact" class="section" tabindex="-1">
+                <h2>Liên hệ</h2>
+                <form id="contactForm" class="contact-form" action="https://formspree.io/f/xyzwznnl" method="POST">
+                    <label for="name">Họ & Tên</label>
+                    <input type="text" id="name" name="name" placeholder="Họ và tên" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="_replyto" placeholder="you@example.com" required>
+
+                    <label for="message">Nội dung</label>
+                    <textarea id="message" name="message" rows="6" placeholder="Tin nhắn..." required></textarea>
+
+                    <!-- honeypot to reduce spam -->
+                    <input type="text" name="_gotcha" style="display:none">
+
+                    <button type="submit" class="btn submit-btn">Gửi</button>
+                    <div class="form-feedback" aria-live="polite"></div>
+                </form>
+            </section>
+            <section id="social" class="section">
+                <h2>Mạng xã hội</h2>
+                <p>Đang cập nhật...</p>
+            </section>
+        </div>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>
